@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd x86_64/
+
+rm -rf dystopia*
+
+repo-add -R dystopia.tar.gz *.pacman
+repo-add -R dystopia.db.tar.gz *.pkg.tar.zst
+
+rm -rf *.db
+rm -rf *.files
+rm -rf *.old
+
+mv dystopia.db.tar.gz dystopia.db
+mv dystopia.files.tar.gz dystopia.files
