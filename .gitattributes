@@ -1,2 +1,4 @@
 x86_64/demonos-core-fonts-1.r.-1-any.pkg.tar.zst filter=lfs diff=lfs merge=lfs -text
 x86_64/demonos-core-fonts-1.r.-1-any.pkg.tar.zst.sig filter=lfs diff=lfs merge=lfs -text
+x86_64/demonos-wallpapers-1.r.-1-any.pkg.tar.zst filter=lfs diff=lfs merge=lfs -text
+x86_64/demonos-wallpapers-1.r.-1-any.pkg.tar.zst.sig filter=lfs diff=lfs merge=lfs -text
