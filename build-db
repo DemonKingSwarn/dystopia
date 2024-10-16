@@ -4,7 +4,7 @@ cd x86_64/
 
 rm -rf dystopia*
 
-for f in *.zst; do gpg --yes --use-agent --output "$f".sig --detach-sig "$f" ; done
+for f in *.zst; do gpg --use-agent --batch --yes --output "$f".sig --detach-sig "$f" ; done
 
 repo-add --verify --sign dystopia.db.tar.gz *.pkg.tar.zst
 #repo-add -R dystopia.db.tar.gz *.pkg.tar.zst
