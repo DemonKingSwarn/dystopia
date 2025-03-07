@@ -6,16 +6,12 @@ rm -rf dystopia*
 
 for f in *.zst; do gpg --use-agent --batch --yes --output "$f".sig --detach-sig "$f" ; done
 
-repo-add --verify --sign dystopia.db.tar.gz *.pkg.tar.zst
-#repo-add -R dystopia.db.tar.gz *.pkg.tar.zst
+#repo-add --verify --sign dystopia.db.tar.gz *.pkg.tar.zst
+repo-add -R dystopia.db.tar.gz *.pkg.tar.zst
 
 rm -rf *.db
 rm -rf *.files
 rm -rf *.old
-rm -rf *.files.sig
-rm -rf  *.db.sig
 
 mv dystopia.db.tar.gz dystopia.db
 mv dystopia.files.tar.gz dystopia.files
-mv dystopia.files.tar.gz.sig dystopia.files.sig
-mv dystopia.db.tar.gz.sig dystopia.db.sig
